@@ -1,11 +1,19 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import Form from './Form';
 export default function Header() {
+
+
+  const addHandler = (text) => {
+    return (
+      <Text>Hello, {text}!</Text>
+    )
+  }
+
   return (
     <View style={styles.headerContainer}>
         <View style={styles.logo}>Logo</View>
-        <Form></Form>
+        <Form addHandler={addHandler}/>
     </View>
   );
 }

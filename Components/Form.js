@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
 import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
-export default function Form() {
+export default function Form({addHandler}) {
     const [text, setValue] = useState('')
     const onChangeFunc = (text) => {
         setValue(text)
     }
   return (
-    <View>
+    <View style={styles.form}>
         <TextInput style={styles.input} onChangeText={onChangeFunc} placeholder='Type your name...'></TextInput>
+        <Button color='transparent' title='Add' onPress={() => addHandler(text)}/>
+
     </View>
   );
 }
@@ -23,5 +25,10 @@ const styles = StyleSheet.create({
         fontSize: 16,
         fontFamily: 'sans-serif',
         letterSpacing: 1,
-    }
+    },
+    form: {
+        display: 'flex',
+        flexDirection: 'row',
+        height: 50,
+    },
 });
