@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 export default function Header() {
 
   return (
     <View style={styles.headerContainer}>
-        <View style={styles.logo}>Logo</View>
+        <View style={styles.logo}><Text>Logo</Text></View>
     </View>
   );
 }
