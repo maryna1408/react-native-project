@@ -8,7 +8,7 @@ export default function Form({addHandler}) {
     }
   return (
     <View style={styles.form}>
-        <TextInput style={styles.input} onChangeText={onChangeFunc} placeholder='Type your task...'></TextInput>
+        <TextInput style={styles.input} onChangeText={onChangeFunc} placeholder='Type your task...'/>
         <Button title='Add' onPress={() => addHandler(text)}/>
     </View>
   );
@@ -18,7 +18,7 @@ const styles = StyleSheet.create({
     input: {
         padding: 10,
         borderBottomWidth: 1,
-        boderColor: 'black',
+        borderColor: 'black',
         marginVertical: 15,
         fontSize: 16,
         fontFamily: 'sans-serif',
