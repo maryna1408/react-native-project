@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 export default function Header() {
 
   return (
     <View style={styles.headerContainer}>
-        <View style={styles.logo}>Logo</View>
+        <View style={styles.logo}><Text>News</Text></View>
     </View>
   );
 }
@@ -22,11 +22,10 @@ const styles = StyleSheet.create({
 
     },
     logo: {
-        color: 'black',
-        fontSize: 40,
-        textTransform: 'uppercase',
-        fontFamily: 'sans-serif',
-        fontWeight: 'bold',
+      color: 'black',
+      fontSize: 30,
+      textTransform: 'uppercase',
+      fontFamily: 'sans-serif',
 
     }
 });

@@ -1,17 +1,15 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import {View, Text, Button} from 'react-native';
+import {View, Text} from 'react-native';
+import { gStyles } from '../styles/styles';
 
-export function FullInf({navigation}) {
+export function FullInf({route}) {
 
-    const loadScene = () => {
-        navigation.goBack();
-    }
 
     return (
         <View>
-        <Text>Hi!</Text>
-        <Button title='Open page' onPress={loadScene}/>
+            <Text style={gStyles.name}>{route.params.name}</Text>
+            <Text style={gStyles.full}>{route.params.full}</Text>
         </View>
     )
 } 

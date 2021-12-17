@@ -1,15 +1,14 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import 'react-native-gesture-handler';
 import MainStack from './navigation';
 
 export default function App() {
   return (
-    <View>
       <MainStack/>
-    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  
+
 });

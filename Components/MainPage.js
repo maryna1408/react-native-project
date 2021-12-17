@@ -1,49 +1,49 @@
 import React, {useState} from 'react';
-import { StyleSheet, View, FlatList} from 'react-native';
+import { StyleSheet, View, FlatList, Button, TouchableOpacity, Text} from 'react-native';
 import Form from './Form';
-import ListItem from './ListItem';
 import Header from './Header';
 import Footer from './Footer';
+import { gStyles } from '../styles/styles';
 
 export default function MainPage({navigation}) {
 
+  const loadScene = () => {
+    navigation.navigate('FullInf')
+  }
+
 const [listOfItems, setListOfItems] = useState([
-  {text: 'Learn React Native', key: 1},
-  {text: 'Learn React Native', key: 2},
-  {text: 'Learn React Native', key: 3},
-  {text: 'Learn React Native', key: 4}
+  {name: 'Google', anons: 'Google!!!', full: 'Google is cool!!!'},
+  {name: 'Apple', anons: 'Apple!!!', full: 'Apple is cool!!!'},
+  {name: 'Facebook', anons: 'Facebook!!!', full: 'Facebook is cool!!!'},
+  {name: 'Instagram', anons: 'Instagram!!!', full: 'Instagram is cool!!!'}
 ])
 
-const addHandler = (text) => {
-  setListOfItems((list) => {
-    return[
-      {text: text, key: Math.random().toString(36).substring(7)},
-      ... list
-    ]
-  })
-}
-
-// const loadScene () => {
-//     navigation.navigate('FullInf');
+// const addHandler = (text) => {
+//   setListOfItems((list) => {
+//     return[
+//       {text: text, },
+//       ... list
+//     ]
+//   })
 // }
+
 
   return (
     <View>
       <Header />
-      {/* <Button title='Open page' onPress={loadScene}/> */}
-      <Form addHandler={addHandler}/>
+      {/* <Form addHandler={addHandler}/> */}
       <FlatList data={listOfItems} renderItem={({item})=>(
-        <ListItem item={item}/>
+        <TouchableOpacity style={gStyles.new} onPress={()=> navigation.navigate('FullInf', item)}>
+        <Text style={gStyles.name}>{item.name}</Text>
+        <Text style={gStyles.anons}>{item.anons}</Text>
+    </TouchableOpacity>
       )}/>
+{/* <Button title="fullinf" onPress={loadScene} /> */}
       <Footer />
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  mainText: {
-    fontSize: 22,
-    fontFamily: 'italic',
-    letterSpacing: 1,
-  }
+  
 });
