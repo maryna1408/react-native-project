@@ -7,9 +7,6 @@ import { gStyles } from '../styles/styles';
 
 export default function MainPage({navigation}) {
 
-  const loadScene = () => {
-    navigation.navigate('FullInf')
-  }
 
 const [listOfItems, setListOfItems] = useState([
   {name: 'Google', anons: 'Google!!!', full: 'Google is cool!!!'},
