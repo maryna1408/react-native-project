@@ -5,6 +5,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { gStyles } from '../styles/styles';
 
+
 export default function MainPage({navigation}) {
 
 
@@ -35,7 +36,6 @@ const [listOfItems, setListOfItems] = useState([
         <Text style={gStyles.anons}>{item.anons}</Text>
     </TouchableOpacity>
       )}/>
-{/* <Button title="fullinf" onPress={loadScene} /> */}
       <Footer />
     </View>
   );
