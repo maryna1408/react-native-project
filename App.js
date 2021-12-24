@@ -1,11 +1,11 @@
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import 'react-native-gesture-handler';
-import MainStack from './Navigation/navigation';
+import MainDrawer from './Navigation/drawerNavigation';
 
 export default function App() {
   return (
-      <MainStack/>
+      <MainDrawer/>
   );
 }
 
