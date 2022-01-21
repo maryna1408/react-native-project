@@ -1,10 +1,10 @@
-import React from 'react';
-import {View, Text} from 'react-native';
+import React from "react";
+import { SafeAreaView, Text } from "react-native-web";
 
-export default function Settings() {
-    return(
-        <View>
-            <Text>Settings screen!</Text>
-        </View>
+export default function Notifications() {
+    return (
+        <SafeAreaView>
+            <Text>Notifications!</Text>
+        </SafeAreaView>
     )
 }
